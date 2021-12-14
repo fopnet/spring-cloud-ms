@@ -1,4 +1,4 @@
-package com.workerms;
+package com.ms.worker;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

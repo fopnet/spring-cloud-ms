@@ -1,4 +1,7 @@
 {
     "java.configuration.updateBuildConfiguration": "automatic",
-    "java.home": "/Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home"
+    "java.home": "/Library/Java/JavaVirtualMachines/jdk-11.0.10.jdk/Contents/Home",
+    "java.project.sourcePaths": [
+        "worker-ms/src/main/java/com/ms/worker"
+    ]
 }

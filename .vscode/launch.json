@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-WorkerMsApplication<worker>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.ms.worker.WorkerMsApplication",
+            "projectName": "worker",
+            "args": ""
+        }
+    ]
+}
