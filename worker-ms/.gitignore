@@ -12,6 +12,7 @@ target/
 .settings
 .springBeans
 .sts4-cache
+.vscode
 
 ### IntelliJ IDEA ###
 .idea
@@ -30,4 +31,7 @@ build/
 !**/src/test/**/build/
 
 ### VS Code ###
-.vscode/
+.vscode
+
+## Mac
+.DS_Store
