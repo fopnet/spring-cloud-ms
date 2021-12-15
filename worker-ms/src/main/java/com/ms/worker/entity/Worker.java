@@ -1,4 +1,4 @@
-package com.ms.worker.entities;
+package com.ms.worker.entity;
 
 import java.io.Serializable;
 

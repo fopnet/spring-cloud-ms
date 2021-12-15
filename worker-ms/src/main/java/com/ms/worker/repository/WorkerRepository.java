@@ -1,6 +1,6 @@
 package com.ms.worker.repository;
 
-import com.ms.worker.entities.Worker;
+import com.ms.worker.entity.Worker;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

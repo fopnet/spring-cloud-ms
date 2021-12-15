@@ -2,7 +2,7 @@ package com.ms.worker.controller;
 
 import java.util.List;
 
-import com.ms.worker.entities.Worker;
+import com.ms.worker.entity.Worker;
 import com.ms.worker.repository.WorkerRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;

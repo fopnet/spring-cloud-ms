@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch PayrollApplication",
+            "request": "launch",
+            "mainClass": "com.ms.payroll.PayrollApplication",
+            "projectName": "payroll"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-WorkerMsApplication<worker>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
