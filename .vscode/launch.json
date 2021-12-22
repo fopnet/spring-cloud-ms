@@ -48,12 +48,13 @@
         },
         {
             "type": "java",
-            "name": "Spring Boot-ConfigServerApplication<ms-config-server>",
+            "name": "config-server",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
             "mainClass": "com.ms.msconfigserver.ConfigServerApplication",
             "projectName": "ms-config-server",
+            "vmArgs": "-DGITHUB_USER=fopnet -DGITHUB_PASS=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",
             "args": ""
         }
     ]
