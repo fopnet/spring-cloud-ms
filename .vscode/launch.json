@@ -2,19 +2,32 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch PayrollApplication",
-            "request": "launch",
-            "mainClass": "com.ms.payroll.PayrollApplication",
-            "projectName": "payroll"
-        },
-        {
-            "type": "java",
-            "name": "Spring Boot-WorkerMsApplication<worker>",
+            "name": "ms-worker 8001",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
-            "mainClass": "com.ms.worker.WorkerMsApplication",
+            "mainClass": "com.ms.worker.WorkerApplication",
             "projectName": "worker",
+            "vmArgs": "-Dserver.port=8001"
+        },
+        {
+            "type": "java",
+            "name": "ms-worker 8002",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.ms.worker.WorkerApplication",
+            "projectName": "worker",
+            "vmArgs": "-Dserver.port=8002"
+        },
+        {
+            "type": "java",
+            "name": "ms-Payroll ",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.ms.payroll.PayrollApplication",
+            "projectName": "payroll",
             "args": ""
         }
     ]
