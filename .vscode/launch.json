@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ConfigServerApplication",
+            "request": "launch",
+            "mainClass": "com.ms.msconfigserver.ConfigServerApplication",
+            "projectName": "ms-config-server"
+        },
+        {
+            "type": "java",
             "name": "ms-worker 8001",
             "request": "launch",
             "cwd": "${workspaceFolder}",
