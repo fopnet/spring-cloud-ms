@@ -21,7 +21,7 @@
         },
         {
             "type": "java",
-            "name": "Spring Boot-EurekaServerApplication<eureka-server>",
+            "name": "eureka-server",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
@@ -31,7 +31,7 @@
         },
         {
             "type": "java",
-            "name": "Spring Boot-ApiGatewayZuulWsApplication<api-gateway-zuul-ws>",
+            "name": "api-gateway-zuul-ws",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",

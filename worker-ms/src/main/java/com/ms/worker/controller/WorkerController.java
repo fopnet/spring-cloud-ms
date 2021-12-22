@@ -38,7 +38,11 @@ public class WorkerController {
     public ResponseEntity<Worker> findById(@PathVariable Long id) {
         logger.info("PORT {}", environment.getProperty("local.server.port"));
 
+        // try {
         // Thread.sleep(3000);
+        // } catch (InterruptedException e) {
+        // e.printStackTrace();
+        // }
 
         Worker wk = repository.findById(id).orElseThrow(() -> new RuntimeException("Worker not found"));
         return ResponseEntity.ok(wk);
