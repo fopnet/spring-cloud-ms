@@ -5,7 +5,7 @@
             "name": "Launch ConfigServerApplication",
             "request": "launch",
             "mainClass": "com.ms.msconfigserver.ConfigServerApplication",
-            "projectName": "ms-config-server"
+            "projectName": "config-server"
         },
         {
             "type": "java",
@@ -44,6 +44,16 @@
             "console": "internalConsole",
             "mainClass": "com.ms.apigatewayzuul.ApiGatewayZuulWsApplication",
             "projectName": "api-gateway-zuul-ws",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ConfigServerApplication<ms-config-server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.ms.msconfigserver.ConfigServerApplication",
+            "projectName": "ms-config-server",
             "args": ""
         }
     ]
