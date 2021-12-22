@@ -7,18 +7,7 @@
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
             "mainClass": "com.ms.worker.WorkerApplication",
-            "projectName": "worker",
-            "vmArgs": "-Dserver.port=8001"
-        },
-        {
-            "type": "java",
-            "name": "ms-worker 8002",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "console": "internalConsole",
-            "mainClass": "com.ms.worker.WorkerApplication",
-            "projectName": "worker",
-            "vmArgs": "-Dserver.port=8002"
+            "projectName": "worker"
         },
         {
             "type": "java",
@@ -28,6 +17,16 @@
             "console": "internalConsole",
             "mainClass": "com.ms.payroll.PayrollApplication",
             "projectName": "payroll",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-EurekaServerApplication<eureka-server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.ms.eurekaserver.EurekaServerApplication",
+            "projectName": "eureka-server",
             "args": ""
         }
     ]
