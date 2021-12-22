@@ -56,6 +56,16 @@
             "projectName": "ms-config-server",
             "vmArgs": "-DGITHUB_USER=fopnet -DGITHUB_PASS=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",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "ms-user",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.ms.user.UserApplication",
+            "projectName": "user",
+            "args": ""
         }
     ]
 }
