@@ -12,7 +12,7 @@
 	<artifactId>api-gateway-zuul-ws</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>api-gateway-zuul-ws</name>
-	<description>Zuu Server Api Gateway</description>
+	<description>Zuul Server Api Gateway</description>
 
 	<properties>
 		<java.version>11</java.version>

@@ -28,6 +28,16 @@
             "mainClass": "com.ms.eurekaserver.EurekaServerApplication",
             "projectName": "eureka-server",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ApiGatewayZuulWsApplication<api-gateway-zuul-ws>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.ms.apigatewayzuul.ApiGatewayZuulWsApplication",
+            "projectName": "api-gateway-zuul-ws",
+            "args": ""
         }
     ]
 }
