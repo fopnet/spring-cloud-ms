@@ -3,7 +3,7 @@ package com.ms.user.controller;
 import javax.persistence.EntityNotFoundException;
 
 import com.ms.user.entity.User;
-import com.ms.user.entity.UserRepository;
+import com.ms.user.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
