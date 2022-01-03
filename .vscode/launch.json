@@ -66,6 +66,16 @@
             "mainClass": "com.ms.user.UserApplication",
             "projectName": "user",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "ms-auth",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.ms.auth.AuthApplication",
+            "projectName": "ms-auth",
+            "args": ""
         }
     ]
 }
