@@ -9,7 +9,7 @@
         },
         {
             "type": "java",
-            "name": "ms-worker 8001",
+            "name": "ms-worker",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",

@@ -8,7 +8,6 @@ import com.ms.worker.repository.WorkerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
@@ -30,7 +29,7 @@ public class WorkerController {
     @Autowired
     private WorkerRepository repository;
 
-    @Value("${test.config}")
+    // @Value("${test.config}")
     private String testConfig;
 
     @GetMapping
