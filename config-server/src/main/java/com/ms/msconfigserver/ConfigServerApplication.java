@@ -1,17 +1,19 @@
 package com.ms.msconfigserver;
 
-import org.apache.commons.lang.StringUtils;
+import java.util.Objects;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-@EnableEurekaClient
 @EnableConfigServer
 public class ConfigServerApplication implements CommandLineRunner {
+	private static Logger logger = LoggerFactory.getLogger(ConfigServerApplication.class);
 
 	@Value("${spring.cloud.config.server.git.username}")
 	private String gitUserName;
@@ -23,8 +25,8 @@ public class ConfigServerApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("GITHUB_USER:" + gitUserName);
-		System.out.println("GITHUB_PWD:" + StringUtils.isNotBlank(gitPassWord));
+		logger.info("GITHUB_USER: {}", gitUserName);
+		logger.info("GITHUB_PWD:{}", Objects.nonNull(gitPassWord));
 
 	}
 

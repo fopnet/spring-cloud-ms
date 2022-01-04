@@ -1,5 +1,7 @@
 package com.ms.auth.config;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -7,7 +9,11 @@ import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenCo
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 @Configuration
+@RefreshScope // actuator
 public class AppConfig {
+
+    @Value("${jwt.secret}")
+    private String jwtSecret;
 
     @Bean
     public BCryptPasswordEncoder getEncoder() {
@@ -17,7 +23,7 @@ public class AppConfig {
     @Bean
     public JwtAccessTokenConverter accessTokenConverter() {
         JwtAccessTokenConverter jwtAccessTokenConverter = new JwtAccessTokenConverter();
-        jwtAccessTokenConverter.setSigningKey("MY-SECRET-KEY");
+        jwtAccessTokenConverter.setSigningKey(jwtSecret);
         return jwtAccessTokenConverter;
     }
 

@@ -18,7 +18,9 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
     public static String[] publicRouters = { "/ms-auth/oauth/token" };
     public static String[] operatorRouters = { "/ms-worker/**" };
-    public static String[] adminRouters = { "/ms-payroll/**", "/ms-user/**" };
+    public static String[] adminRouters = { "/ms-payroll/**", "/ms-user/**", "/actuator/refresh",
+            "/ms-worker/actuator/**",
+            "/ms-auth/actuator/**" };
 
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {

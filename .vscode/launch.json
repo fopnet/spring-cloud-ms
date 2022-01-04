@@ -54,7 +54,7 @@
             "console": "internalConsole",
             "mainClass": "com.ms.msconfigserver.ConfigServerApplication",
             "projectName": "ms-config-server",
-            "vmArgs": "-DGITHUB_USER=fopnet -DGITHUB_PASS=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",
+            "vmArgs": "-DGITHUB_USER=fop.net@gmail.com -DGITHUB_PASS=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",
             "args": ""
         },
         {
