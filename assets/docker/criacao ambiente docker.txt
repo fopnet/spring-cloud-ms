@@ -32,3 +32,32 @@ registro de imagens de docker https://hub.docker.com
 
 ===========  54 trocando referencias de localhost para containers 
 
+- link das alterações realizadas https://github.com/fopnet/spring-cloud-ms/commit/3f9971f427cfe13b04425048a3113c6835b8afd3
+
+===========  55 Criando container de ms-config-server 
+
+dentro do projeto config-server rodar 
+
+export GITHUB_USER=fopnet
+export GITHUB_PASS=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
+
+./mvnw clean package
+
+- vai gerar o arquivo ms-config-server-0.0.1-SNAPSHOT.jar dentro do target
+
+-- criando o arquivo dockerfile na raiz do projeto com o conteúdo abaixo
+
+FROM openjdk:11
+VOLUME /tmp
+EXPOSE 8888
+ADD ./target/ms-config-server-0.0.1-SNAPSHOT.jar ms-config-server.jar
+ENTRYPOINT ["java","-jar","/ms-config-server.jar"]
+
+-- gerando imagem docker
+
+> docker build -t ms-config-server:v1 .
+
+-- levantando um container com essa imagem
+
+> docker run -p 8888:8888 --name ms-config-server --network spring-cloud-ms-net ms-config-server:v1 -e GITHUB_USER=fopnet -e GITHUB_PASS=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 
+
