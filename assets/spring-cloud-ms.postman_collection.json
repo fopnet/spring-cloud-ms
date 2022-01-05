@@ -1,0 +1,619 @@
+{
+	"info": {
+		"_postman_id": "ca4f8ba8-4ad1-4d62-9876-2ce1a0d51769",
+		"name": "spring-cloud-ms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Fase1",
+			"item": [
+				{
+					"name": "List Workers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/workers/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"workers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Worker By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/workers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"workers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Payment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8101/payments/1/days/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8101",
+							"path": [
+								"payments",
+								"1",
+								"days",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fase3",
+			"item": [
+				{
+					"name": "ms-config-server",
+					"item": [
+						{
+							"name": "ms-worker config default profile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/ms-worker/default",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"ms-worker",
+										"default"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ms-worker config test profile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/ms-worker/test",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"ms-worker",
+										"test"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "List Workers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/workers/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"workers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Worker By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/workers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"workers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Payment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8101/payments/1/days/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8101",
+							"path": [
+								"payments",
+								"1",
+								"days",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show worker config console",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/ms-worker/workers/configs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"ms-worker",
+								"workers",
+								"configs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actuator refresh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/ms-worker/actuator/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"ms-worker",
+								"actuator",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fase4",
+			"item": [
+				{
+					"name": "ms-config-server",
+					"item": [
+						{
+							"name": "ms-worker config default profile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{config-host}}/ms-worker/default",
+									"host": [
+										"{{config-host}}"
+									],
+									"path": [
+										"ms-worker",
+										"default"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ms-worker config test profile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{config-host}}/ms-worker/test",
+									"host": [
+										"{{config-host}}"
+									],
+									"path": [
+										"ms-worker",
+										"test"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Workers",
+					"item": [
+						{
+							"name": "List Workers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api-gateway}}/ms-worker/workers",
+									"host": [
+										"{{api-gateway}}"
+									],
+									"path": [
+										"ms-worker",
+										"workers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Workers Copy",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api-gateway}}/ms-worker/workers",
+									"host": [
+										"{{api-gateway}}"
+									],
+									"path": [
+										"ms-worker",
+										"workers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Worker By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api-gateway}}/ms-workers/workers/1",
+									"host": [
+										"{{api-gateway}}"
+									],
+									"path": [
+										"ms-workers",
+										"workers",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show worker config console",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api-gateway}}/ms-worker/workers/configs",
+									"host": [
+										"{{api-gateway}}"
+									],
+									"path": [
+										"ms-worker",
+										"workers",
+										"configs"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Payroll",
+					"item": [
+						{
+							"name": "Get Payment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api-gateway}}/ms-payroll/payments/1/days/5",
+									"host": [
+										"{{api-gateway}}"
+									],
+									"path": [
+										"ms-payroll",
+										"payments",
+										"1",
+										"days",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "search by email",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api-gateway}}/ms-user/users/search?email=nina@gmail.com",
+									"host": [
+										"{{api-gateway}}"
+									],
+									"path": [
+										"ms-user",
+										"users",
+										"search"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "nina@gmail.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api-gateway}}/ms-user/users/1",
+									"host": [
+										"{{api-gateway}}"
+									],
+									"path": [
+										"ms-user",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "user by email",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api-gateway}}/ms-auth/users/search?email=nina2@gmail.com",
+									"host": [
+										"{{api-gateway}}"
+									],
+									"path": [
+										"ms-auth",
+										"users",
+										"search"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "nina2@gmail.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"if (responseCode.code >= 200 && responseCode.code < 300) {",
+											"    var json = JSON.parse(responseBody);",
+											"    postman.setEnvironmentVariable('token', json.access_token);",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{client-secret}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{client-name}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{api-gateway}}/ms-auth/oauth/token",
+									"host": [
+										"{{api-gateway}}"
+									],
+									"path": [
+										"ms-auth",
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "actuator refresh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/ms-worker/actuator/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"ms-worker",
+								"actuator",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

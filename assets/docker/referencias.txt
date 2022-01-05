@@ -1,0 +1,23 @@
+-- link do eureka para visualizar as instancias rodando
+http://localhost:8761/
+
+-- gerando novo projeto spring 
+https://start.spring.io/
+
+-- tr com outras ferramentas
+
+https://www.youtube.com/watch?v=BnknNTN8icw
+
+Course Contents 📚
+⌚ (00:00) Intro
+⌚ (00:44) Microservice Overview
+⌚ (06:00) Creating Department Service
+⌚ (17:06) Creating a User Service
+⌚ (33:20) Implementing Service Registry
+⌚ (43:20) Implementing API Gateway
+⌚ (56:36) Creating Hystrix Dashboard
+⌚ (01:02:29) Cloud Config Server
+⌚ (01:05:15) GitHub Repo for Config Server
+⌚ (01:12:30) Zipkin and Sleuth
+
+

@@ -118,6 +118,10 @@ ENTRYPOINT ["java","-jar","/ms-worker-server"]
 
 > docker run -P --name ms-worker-server --network spring-cloud-ms-net ms-worker-server:v1
 
+-- abrindo nova instancia 
+
+> docker run -P --network spring-cloud-ms-net ms-worker-server:v1
+
 ===========  58. Container de ms-user
 
 
