@@ -84,3 +84,28 @@ ENTRYPOINT ["java","-jar","/ms-eureka-server.jar"]
 -- levantando um container com essa imagem
 
 > docker run -p 8761:8761 --name ms-eureka-server --network spring-cloud-ms-net ms-eureka-server:v1
+
+===========  57. Container de ms-worker
+
+
+dentro do projeto worker-ms rodar 
+
+./mvnw clean package -DskipTests
+
+- vai gerar o arquivo worker-0.0.1-SNAPSHOT.jar dentro do target
+
+-- criando o arquivo dockerfile na raiz do projeto com o conteúdo abaixo
+
+FROM openjdk:11
+VOLUME /tmp
+ADD ./target/worker-0.0.1-SNAPSHOT.jar ms-worker-server.jar
+ENTRYPOINT ["java","-jar","/ms-worker-server"]
+
+-- gerando imagem docker
+
+> docker build -t ms-worker-server:v1 .
+
+-- levantando um container com essa imagem em uma porta aleatória com parametro -P
+
+> docker run -P --name ms-worker-server --network spring-cloud-ms-net ms-worker-server:v1
+
