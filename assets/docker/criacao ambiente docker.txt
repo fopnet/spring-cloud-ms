@@ -61,3 +61,26 @@ ENTRYPOINT ["java","-jar","/ms-config-server.jar"]
 
 > docker run -p 8888:8888 --name ms-config-server --network spring-cloud-ms-net -e GITHUB_USER=fopnet -e GITHUB_PASS=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 ms-config-server:v1
 
+===========  56 Criando container de ms-eureka-server 
+
+dentro do projeto eureka-server rodar 
+
+./mvnw clean package
+
+- vai gerar o arquivo eureka-server-0.0.1-SNAPSHOT.jar dentro do target
+
+-- criando o arquivo dockerfile na raiz do projeto com o conteúdo abaixo
+
+FROM openjdk:11
+VOLUME /tmp
+EXPOSE 8761
+ADD ./target/eureka-server-0.0.1-SNAPSHOT.jar ms-eureka-server.jar
+ENTRYPOINT ["java","-jar","/ms-eureka-server.jar"]
+
+-- gerando imagem docker
+
+> docker build -t ms-eureka-server:v1 .
+
+-- levantando um container com essa imagem
+
+> docker run -p 8761:8761 --name ms-eureka-server --network spring-cloud-ms-net ms-eureka-server:v1
