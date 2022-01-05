@@ -10,11 +10,20 @@ registro de imagens de docker https://hub.docker.com
 
 > docker pull postgres:12-alpine
 
+----------------- DOCKER COMMANDS
+
 - listando imagens locais
 > docker images  
 
 -- removendo imagens locais
-> docker rmi {IMAGE_ID}
+> docker rmi {CONTAINER_ID}
+
+-- iniciando instancia
+> docker start {CONTAINER_ID}
+
+-- logs da instancia
+> docker logs -f {CONTAINER_ID}
+
 
 - rodando a imagem
 > docker run -p 5432:5432 --name ms-workr-pg12 --network spring-cloud-ms-net -e POSTGRES_PASSWORD=1234567 -e POSTGRES_DB=db-ms-worker postgres:12-alpine
