@@ -1,0 +1,21 @@
+-- 51. criando rede docker spring-cloud-ms
+
+> docker network create spring-cloud-ms-net
+
+--52. rodando ms-worker no profile dev com postgres
+
+registro de imagens de docker https://hub.docker.com
+
+- baixando versão 12 da imagem postgres no hub.docker.com
+
+> docker pull postgres:12-alpine
+
+- listando imagens locais
+> docker images  
+
+-- removendo imagens locais
+> docker rmi {IMAGE_ID}
+
+- rodando a imagem
+> docker run -p 5432:5432 --name ms-workr-pg12 --network spring-cloud-ms-net -e POSTGRES_PASSWORD=1234567 -e POSTGRES_DB=db-ms-worker postgres:12-alpine
+
