@@ -142,4 +142,80 @@ ENTRYPOINT ["java","-jar","/ms-user-server"]
 
 > docker run -P --name ms-user-server --network spring-cloud-ms-net ms-user-server:v1
 
+===========  59. Container de ms-payroll
+
+
+dentro do projeto payroll-ms rodar 
+
+./mvnw clean package -DskipTests
+
+- vai gerar o arquivo payroll-0.0.1-SNAPSHOT.jar dentro do target
+
+-- criando o arquivo dockerfile na raiz do projeto com o conteúdo abaixo
+
+FROM openjdk:11
+VOLUME /tmp
+ADD ./target/payroll-0.0.1-SNAPSHOT.jar ms-payroll-server.jar
+ENTRYPOINT ["java","-jar","/ms-payroll-server"]
+
+-- gerando imagem docker
+
+> docker build -t ms-payroll-server:v1 .
+
+-- levantando um container com essa imagem em uma porta aleatória com parametro -P
+
+> docker run -P --name ms-payroll-server --network spring-cloud-ms-net ms-payroll-server:v1
+
+===========  60. Container de ms-auth
+
+
+dentro do projeto payroll-ms rodar 
+
+./mvnw clean package -DskipTests
+
+- vai gerar o arquivo payroll-0.0.1-SNAPSHOT.jar dentro do target
+
+-- criando o arquivo dockerfile na raiz do projeto com o conteúdo abaixo
+
+FROM openjdk:11
+VOLUME /tmp
+ADD ./target/auth-0.0.1-SNAPSHOT.jar ms-auth-server.jar
+ENTRYPOINT ["java","-jar","/ms-auth-server"]
+
+-- gerando imagem docker
+
+> docker build -t ms-auth-server:v1 .
+
+-- levantando um container com essa imagem em uma porta aleatória com parametro -P
+
+> docker run -P --name ms-auth-server --network spring-cloud-ms-net ms-auth-server:v1
+
+
+===========  61. Container de ms-gateway-zuul
+
+
+dentro do projeto gateway-zuul-ms rodar 
+
+./mvnw clean package -DskipTests
+
+- vai gerar o arquivo gateway-zuul-ms-0.0.1-SNAPSHOT.jar dentro do target
+
+-- criando o arquivo dockerfile na raiz do projeto com o conteúdo abaixo
+
+FROM openjdk:11
+VOLUME /tmp
+EXPOSE 8765
+ADD ./target/api-gateway-zuul-ws-0.0.1-SNAPSHOT.jar api-gateway-zuul.jar
+ENTRYPOINT ["java","-jar","/api-gateway-zuul.jar"]
+
+-- gerando imagem docker
+
+> docker build -t api-gateway-zuul-server:v1 .
+
+-- levantando um container com essa imagem em uma porta aleatória com parametro -P
+
+> docker run -p 8765:8765 --name api-gateway-zuul-server --network spring-cloud-ms-net api-gateway-zuul-server:v1
+
+
+
 
