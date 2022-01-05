@@ -19,3 +19,14 @@ registro de imagens de docker https://hub.docker.com
 - rodando a imagem
 > docker run -p 5432:5432 --name ms-workr-pg12 --network spring-cloud-ms-net -e POSTGRES_PASSWORD=1234567 -e POSTGRES_DB=db-ms-worker postgres:12-alpine
 
+-- 53 rodando ms-user no profile dev
+
+- visualizando os containers em execução
+> docker ps
+
+- visualizando os containers em execução e parados
+> docker ps -a
+
+-- rodando uma nova instancia na porta externa 5433
+> docker run -p 5433:5432 --name ms-user-pg12 --network spring-cloud-ms-net -e POSTGRES_PASSWORD=1234567 -e POSTGRES_DB=db-ms-user postgres:12-alpine
+
