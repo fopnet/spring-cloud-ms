@@ -16,13 +16,13 @@ registro de imagens de docker https://hub.docker.com
 > docker images  
 
 -- removendo imagens locais
-> docker rmi {CONTAINER_ID}
+> docker rmi {IMAGE_ID}
 
 -- iniciando instancia
 > docker start {CONTAINER_ID}
 
 -- logs da instancia
-> docker logs -f {CONTAINER_ID}
+> docker logs -f {REPO_NAME}
 
 
 - rodando a imagem
@@ -117,4 +117,29 @@ ENTRYPOINT ["java","-jar","/ms-worker-server"]
 -- levantando um container com essa imagem em uma porta aleatória com parametro -P
 
 > docker run -P --name ms-worker-server --network spring-cloud-ms-net ms-worker-server:v1
+
+===========  58. Container de ms-user
+
+
+dentro do projeto user-ms rodar 
+
+./mvnw clean package -DskipTests
+
+- vai gerar o arquivo user-0.0.1-SNAPSHOT.jar dentro do target
+
+-- criando o arquivo dockerfile na raiz do projeto com o conteúdo abaixo
+
+FROM openjdk:11
+VOLUME /tmp
+ADD ./target/user-0.0.1-SNAPSHOT.jar ms-user-server.jar
+ENTRYPOINT ["java","-jar","/ms-user-server"]
+
+-- gerando imagem docker
+
+> docker build -t ms-user-server:v1 .
+
+-- levantando um container com essa imagem em uma porta aleatória com parametro -P
+
+> docker run -P --name ms-user-server --network spring-cloud-ms-net ms-user-server:v1
+
 
