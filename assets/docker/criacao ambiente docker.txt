@@ -220,6 +220,19 @@ ENTRYPOINT ["java","-jar","/api-gateway-zuul.jar"]
 
 > docker run -p 8765:8765 --name api-gateway-zuul-server --network spring-cloud-ms-net api-gateway-zuul-server:v1
 
+------- outros comandos para outros projetos
 
+-- rename container name
+> docker rename naughty_swanson oracle-xe-11g-mprj
 
+-- criando máquina oracle para o mprj
+
+1. download from docker hub release 2
+> docker pull wnameless/oracle-xe-11g-r2
+
+2. gerando imagem
+> docker build -t wnameless/oracle-xe-11g-r2 .
+
+3. -- run as name oracle-xe-11g-mprj and open external port 1521 
+> docker run --name oracle-xe-11g-mprj -d -p 49161:1521 wnameless/oracle-xe-11g-r2
 
